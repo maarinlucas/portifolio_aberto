@@ -102,6 +102,99 @@ body {
   overflow-wrap: break-word;
 }
 
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000ab;
+  border-radius: 20px;
+  height: 250px;
+  width: 500px;
+  position: fixed;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  padding: 90px 30px;
+  z-index: 1000;
+  line-height: 1.8;
+  text-align: justify;
+  border: solid 1px #f4f4f4;
+
+  animation: fadeIn 0.5s ease forwards; /* Animação de fade-in */
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+/* Classe para o elemento fechado com animação fadeOut */
+.close {
+  display: flex; /* O elemento precisa estar no fluxo de layout para aplicar a animação */
+  flex-direction: column;
+  background-color: #000000ab;
+  border-radius: 20px;
+  height: 250px;
+  width: 500px;
+  position: fixed;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  padding: 90px 30px;
+  z-index: 1000;
+  line-height: 1.8;
+  text-align: justify;
+  border: solid 1px #f4f4f4;
+  animation: fadeOut 0.5s forwards; /* Animação fade-out com duração de 0.5 segundos */
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.open p {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.open a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -40px;
+  right: 5px;
+  cursor: pointer;
+}
+
+#cross {
+  width: 100%;
+  height: 100%;
+}
+
+#cross:hover {
+  filter: brightness(80%);
+}
+
 header {
   background-color: #121312;
   display: flex;
@@ -240,27 +333,28 @@ h3 {
 }
 
 .parte2 {
-  justify-content: center;
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
   row-gap: 20px;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
-.previsao video{
-  width: 400px;
-  height: 200px;
+.previsao video {
+  width: 350px;
+  height: 250px;
 }
-.previsao h2{
+
+.previsao h2 {
+  font-size: 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
 }
 
-.previsao p{
+.previsao p {
   font-size: 1.2em;
 
 }
@@ -313,7 +407,8 @@ span {
   padding: 80px 0px;
   width: 100%;
 }
-.cases{
+
+.cases {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 100px;
@@ -327,22 +422,27 @@ span {
   row-gap: 30px;
 }
 
-.case video{
-  width: 500px;
-  height: 300px;
+.case video {
+  width: 450px;
+  height: 250px;
 }
-.case .desc-video{
+
+.case .desc-video {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
 }
 
-.case p{
+
+.case p {
   font-size: 1.2em;
+  cursor: pointer;
 
 }
+
 .case a {
+  cursor: pointer;
   background-color: #0085D5;
   color: white;
   text-decoration: none;
@@ -353,7 +453,8 @@ span {
   border-bottom: solid rgba(142, 105, 244, 0) 3px;
   display: flex;
 }
-.case a:hover{
+
+.case a:hover {
   background-color: #5298c4;
 }
 
@@ -415,7 +516,7 @@ span {
   max-width: 800px;
   border: solid #0085D5 3px;
   border-radius: 10px;
-  padding: 0px 60px 60px 60px;
+  padding: 0px 60px 40px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -611,7 +712,8 @@ p {
     padding: 80px 0px;
     width: 100%;
   }
-  .cases{
+
+  .cases {
     grid-template-columns: 1fr;
   }
 
@@ -619,14 +721,23 @@ p {
     row-gap: 60px;
   }
 
-  .previsao video{
-    width: 500px;
+  .previsao video {
+    width: 400px;
     height: 300px;
   }
 
 }
 
 @media (max-width: 768px) {
+  .open{
+    height: 150px;
+    width: 350px;
+  }
+  .open p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+  }
   .atual {
     border: solid white 1px !important;
   }
@@ -634,8 +745,14 @@ p {
 
   .coment {
     width: 95%;
-    font-size: 1.3em;
+    border: none;
+    text-align: center;
   }
+  .coment p, strong{
+    font-size: 14px;
+  }
+
+ 
 
   .skills {
     width: 100%;
@@ -646,7 +763,8 @@ p {
     column-gap: 30px;
   }
 
-  .case video, .previsao video{
+  .case video,
+  .previsao video {
     width: 400px;
     height: 200px;
   }
@@ -664,13 +782,24 @@ p {
     width: 90%;
     border-radius: 10px;
     padding: 25px;
+    border: none;
+    row-gap: 10px;
   }
-
+ 
   .sobreMim p {
     padding-top: 0px;
     line-height: 20px;
     text-indent: 0px;
-    text-align: left;
+    text-align: center;
+  }
+
+  .imgPerfil img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 20px;
+    border: solid #0085D5 4px;
   }
 
   .logo2 {
@@ -689,7 +818,7 @@ p {
 
 @media (max-width: 480px) {
 
-  
+
 
   #skillDescription {
     height: 200px;
@@ -731,7 +860,8 @@ p {
   /* Projetos */
 
 
-.case video, .previsao video{
+  .case video,
+  .previsao video {
     width: 300px;
     height: 150px;
   }
@@ -758,11 +888,6 @@ p {
 
 
 
-  .imgPerfil img {
-    bottom: 50px;
-    position: relative;
-
-  }
 
 
 

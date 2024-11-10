@@ -70,9 +70,99 @@ sobre.addEventListener('click', function () {
 
 
 
+
+const cross = document.getElementById('cross');
+
+const turismo = document.getElementById('turismo');
+const sodie = document.getElementById('sodie');
+const rpg = document.getElementById('rpg');
+const paralax = document.getElementById('paralax');
+const calculadora = document.getElementById('caculadora');
+const dj = document.getElementById('dj');
+const dados = document.getElementById('dados');
+const tarefas = document.getElementById('tarefas');
+const tenis = document.getElementById('tenis');
+const senhas = document.getElementById('senhas');
+
+const projectDesc = document.getElementById('projectDescription')
+
+
+const infoProject = document.getElementById('infoProject')
+
+cross.addEventListener('click', function () {
+    infoProject.classList.add('close');
+    infoProject.classList.remove('open');
+})
+
+turismo.addEventListener('click', function () {
+    projectDesc.innerHTML = "Site imersivo, que ensina a respeito de tecnologias, satélites e agentes da Nasa, líder em exploração espacial."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+sodie.addEventListener('click', function () {
+    projectDesc.innerHTML = "Clone do site da sodiê doces."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+rpg.addEventListener('click', function () {
+    projectDesc.innerHTML = "Rpg estático da mitologia nórdica, com imagens geradas por inteligência artificial."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+paralax.addEventListener('click', function () {
+    projectDesc.innerHTML = "Demonstração do incrível efeito paralax immersivo."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+calculadora.addEventListener('click', function () {
+    projectDesc.innerHTML = "Cauculadora simples."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+dj.addEventListener('click', function () {
+    projectDesc.innerHTML = "Sass desenvolvido para me ajudar na função de DJ no Planeta Kids."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+dados.addEventListener('click', function () {
+    projectDesc.innerHTML = "Um tipo de calculadora que permite concverter a quantia de o um tipo de dado(KB, GB, MB...), para outro maior ou menor."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+tarefas.addEventListener('click', function () {
+    projectDesc.innerHTML = "Lista de tarefas que separa tarefas por urgência."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+tenis.addEventListener('click', function () {
+    projectDesc.innerHTML = "Jogo tenis for two desenvolvido através do canvas do javascript."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+senhas.addEventListener('click', function () {
+    projectDesc.innerHTML = "Gerador de senhas."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+
+
 // descrição das tecnologias
 
 const skillDesc = document.getElementById('skillDescription')
+
+
+
+
 
 function leave() {
     skillDesc.innerText = 'Passe o mouse por cima para obter informações da ferramenta...'
@@ -93,6 +183,14 @@ function jsDesc() {
 
 function bootsDesc() {
     skillDesc.innerText = 'Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.'
+}
+
+function nodeDesc() {
+    skillDesc.innerText = 'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada por eventos.'
+}
+
+function pythonDesc() {
+    skillDesc.innerText = 'Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991.'
 }
 
 function reactDesc() {
