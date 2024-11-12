@@ -83,6 +83,8 @@ const dados = document.getElementById('dados');
 const tarefas = document.getElementById('tarefas');
 const tenis = document.getElementById('tenis');
 const senhas = document.getElementById('senhas');
+const metaApi = document.getElementById('metaApi');
+const apiStripe = document.getElementById('apiStripe');
 
 const projectDesc = document.getElementById('projectDescription')
 
@@ -95,7 +97,7 @@ cross.addEventListener('click', function () {
 })
 
 turismo.addEventListener('click', function () {
-    projectDesc.innerHTML = "Site imersivo, que ensina a respeito de tecnologias, satélites e agentes da Nasa, líder em exploração espacial."
+    projectDesc.innerHTML = "Web Site temático e imersivo, ensinando sobre tecnologias, satélites e apresentando alguns agentes da Nasa, empresa líder em exploração espacial."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
 })
@@ -107,7 +109,7 @@ sodie.addEventListener('click', function () {
 })
 
 rpg.addEventListener('click', function () {
-    projectDesc.innerHTML = "Rpg estático da mitologia nórdica, com imagens geradas por inteligência artificial."
+    projectDesc.innerHTML = "Rpg mitologia nórdica, com imagens geradas por inteligência artificial."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
 })
@@ -131,7 +133,7 @@ dj.addEventListener('click', function () {
 })
 
 dados.addEventListener('click', function () {
-    projectDesc.innerHTML = "Um tipo de calculadora que permite concverter a quantia de o um tipo de dado(KB, GB, MB...), para outro maior ou menor."
+    projectDesc.innerHTML = "Um tipo de calculadora que permite converter a quantia de o um tipo de dado(KB, GB, MB...), para outro maior ou menor."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
 })
@@ -143,13 +145,25 @@ tarefas.addEventListener('click', function () {
 })
 
 tenis.addEventListener('click', function () {
-    projectDesc.innerHTML = "Jogo tenis for two desenvolvido através do canvas do javascript."
+    projectDesc.innerHTML = "Jogo 'Tenis For Two' desenvolvido pelo canvas do javascript."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
 })
 
 senhas.addEventListener('click', function () {
     projectDesc.innerHTML = "Gerador de senhas."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+metaApi.addEventListener('click', function () {
+    projectDesc.innerHTML = "Exemplo de uso da API Meta."
+    infoProject.classList.remove('close');
+    infoProject.classList.add('open');
+})
+
+apiStripe.addEventListener('click', function () {
+    projectDesc.innerHTML = "API Stripe, bastante usada para fazer checkouts da mensalidade de Apps por exemplo."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
 })
