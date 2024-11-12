@@ -84,11 +84,10 @@ const tarefas = document.getElementById('tarefas');
 const tenis = document.getElementById('tenis');
 const senhas = document.getElementById('senhas');
 const metaApi = document.getElementById('metaApi');
-const apiStripe = document.getElementById('apiStripe');
+const stripeApi = document.getElementById('stripeApi');
 
 const projectDesc = document.getElementById('projectDescription')
-
-
+const skillDesc = document.getElementById('skillDescription')
 const infoProject = document.getElementById('infoProject')
 
 cross.addEventListener('click', function () {
@@ -162,7 +161,7 @@ metaApi.addEventListener('click', function () {
     infoProject.classList.add('open');
 })
 
-apiStripe.addEventListener('click', function () {
+stripeApi.addEventListener('click', function () {
     projectDesc.innerHTML = "API Stripe, bastante usada para fazer checkouts da mensalidade de Apps por exemplo."
     infoProject.classList.remove('close');
     infoProject.classList.add('open');
@@ -172,7 +171,7 @@ apiStripe.addEventListener('click', function () {
 
 // descrição das tecnologias
 
-const skillDesc = document.getElementById('skillDescription')
+
 
 
 
@@ -195,9 +194,9 @@ function jsDesc() {
     skillDesc.innerText = 'JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.'
 }
 
-function bootsDesc() {
+/* function bootsDesc() {
     skillDesc.innerText = 'Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.'
-}
+} */
 
 function nodeDesc() {
     skillDesc.innerText = 'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada por eventos.'
@@ -211,9 +210,9 @@ function reactDesc() {
     skillDesc.innerText = 'O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.'
 }
 
-function sassDesc() {
+/* function sassDesc() {
     skillDesc.innerText = 'O SASS é uma linguagem de extensão do CSS, a sigla significa “Syntactically Awesome Style Sheets” traduzindo ao pé da letra, folhas de estilo com uma sintaxe incrível. A sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas que iremos comentar. O SASS tem como objetivo tornar o processo de desenvolvimento mais simples e eficiente.'
-}
+} */
 
 
 
